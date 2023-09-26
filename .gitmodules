@@ -1,0 +1,3 @@
+[submodule "jungehaie"]
+	path = jungehaie
+	url = https://github.com/vintagesucks/.dotfiles-jungehaie.git
