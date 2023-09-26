@@ -1,3 +1,4 @@
+alias dotfiles="github ~/.dotfiles"
 alias ls=exa
 alias readlink=greadlink
 
