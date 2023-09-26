@@ -4,3 +4,7 @@
 [submodule "personal"]
 	path = personal
 	url = https://github.com/vintagesucks/.dotfiles-personal.git
+[submodule "dotbot"]
+	path = dotbot
+	url = https://github.com/anishathalye/dotbot
+	ignore = dirty
