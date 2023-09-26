@@ -23,7 +23,7 @@ eval "$(pyenv init -)"
 
 export PATH="${HOME}/.local/bin:$PATH"
 
-source .zsh/composer
-source .zsh/git
+source ~/.dotfiles/.zsh/composer.sh
+source ~/.dotfiles/.zsh/git.sh
 
-source jungehaie/zshrc
+source ~/.dotfiles/jungehaie/zshrc
