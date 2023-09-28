@@ -27,4 +27,5 @@ export PATH="${HOME}/.local/bin:$PATH"
 source ~/.dotfiles/.zsh/composer.sh
 source ~/.dotfiles/.zsh/git.sh
 
+source ~/.dotfiles/personal/zshrc
 source ~/.dotfiles/jungehaie/zshrc
