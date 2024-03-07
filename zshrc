@@ -27,6 +27,7 @@ export PATH="${HOME}/.local/bin:$PATH"
 export DOCKER_HOST=$(docker context inspect | jq -r '.[0].Endpoints.docker.Host')
 
 source ~/.dotfiles/.zsh/composer.sh
+source ~/.dotfiles/.zsh/docker.sh
 source ~/.dotfiles/.zsh/git.sh
 
 source ~/.dotfiles/personal/zshrc
