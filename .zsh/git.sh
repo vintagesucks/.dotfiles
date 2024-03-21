@@ -13,7 +13,7 @@ function release {
 
     git checkout -b release/$1 develop
     git checkout master
-    git merge --no-ff release/$1
+    git merge --no-edit --no-ff release/$1
     git tag -a -m '' $1
     git branch -d release/$1
 }
