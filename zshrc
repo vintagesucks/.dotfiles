@@ -1,5 +1,5 @@
 alias dotfiles="github ~/.dotfiles"
-alias ls=exa
+alias ls=eza
 alias readlink=greadlink
 
 export NVM_AUTO_USE=true
