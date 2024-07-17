@@ -9,3 +9,4 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
+  - [git config --global init.defaultBranch main]
