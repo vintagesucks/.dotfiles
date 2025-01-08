@@ -1,6 +1,7 @@
 alias dotfiles="github ~/.dotfiles"
 alias ls=eza
 alias readlink=greadlink
+alias takeout="docker run --rm -v /var/run/docker.sock:/var/run/docker.sock --add-host=host.docker.internal:host-gateway -it tighten/takeout:latest"
 
 export NVM_AUTO_USE=true
 source ~/.zsh-nvm/zsh-nvm.plugin.zsh
