@@ -46,7 +46,7 @@
       git config --local filter.machine-settings.smudge 'bash -c "
       HOST=\$(hostname)
       if [ \"\$HOST\" = \"air\" ]; then
-          cat
+          sed -E \"s/^{/{\\n  \\\"editor.lineHeight\\\": 29,/\"
       else
           sed -E \"s/^{/{\\n  \\\"editor.fontSize\\\": 14,\\n  \\\"editor.lineHeight\\\": 34,\\n  \\\"terminal.integrated.fontSize\\\": 14,/\"
       fi"'
