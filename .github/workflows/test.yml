@@ -22,5 +22,8 @@ jobs:
         echo "# Personal dotfiles loaded" > personal/zshrc
         echo "# Jungehaie dotfiles loaded" > jungehaie/zshrc
 
+    - name: Set up Homebrew
+      uses: Homebrew/actions/setup-homebrew@main
+
     - name: Install dotfiles
       run: ./install
