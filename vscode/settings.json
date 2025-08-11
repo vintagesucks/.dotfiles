@@ -1,0 +1,160 @@
+{
+  // --- GLOBAL ---
+
+  "css.validate": false,
+
+  "editor.bracketPairColorization.enabled": true,
+  "editor.fontFamily": "'Operator Mono', 'SF Mono', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontSize": 14,
+  "editor.inlineSuggest.enabled": true,
+  "editor.lineHeight": 34,
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "none",
+  "editor.stickyScroll.enabled": false,
+
+  "emmet.includeLanguages": {
+    "twig": "html",
+    "smarty": "html"
+  },
+
+  "explorer.confirmDelete": false,
+
+  "files.associations": {
+    "*.html": "twig"
+  },
+
+  "git.autofetch": true,
+  "git.enabled": true,
+
+  "php.suggest.basic": false,
+
+  "scss.validate": false,
+
+  "security.promptForLocalFileProtocolHandling": false,
+
+  "terminal.integrated.altClickMovesCursor": false,
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.scrollback": 10000,
+  "terminal.integrated.tabs.enabled": true,
+
+  // @see https://github.com/vuejs/language-tools/issues/4424
+  "typescript.tsserver.experimental.useVsCodeWatcher": false,
+
+  "workbench.colorTheme": "Night Owl",
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.tree.enableStickyScroll": true,
+
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+
+  // --- WINDOWS ---
+
+  "security.allowedUNCHosts": [
+    "wsl.localhost",
+    "wsl$"
+  ],
+
+  // @see https://vintagesucks.github.io/wiki/windows/php-laravel-herd.html
+  "terminal.integrated.env.windows": {
+    "PATH": "${env:PATH};${env:USERPROFILE}\\.config\\herd\\bin"
+  },
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "icon": "terminal-powershell",
+      "path": "${env:USERPROFILE}\\AppData\\Local\\Microsoft\\WindowsApps\\Microsoft.PowerShell_8wekyb3d8bbwe\\pwsh.exe"
+    },
+    // @see https://vintagesucks.github.io/wiki/windows/c.html
+    "Visual Studio 2022 Developer PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell",
+      "args": [
+        "-NoExit",
+        "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/Common7/Tools/Launch-VsDevShell.ps1"
+      ]
+    },
+    "Ubuntu-24.04 (WSL)": {
+      "path": "C:\\WINDOWS\\System32\\wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu-24.04"
+      ]
+    }
+  },
+
+  // --- EXTENSIONS ---
+
+  "aws.samcli.enableCodeLenses": false,
+
+  "eslint.packageManager": "yarn",
+  "eslint.validate": [
+      "javascript", "vue"
+  ],
+
+  "github.copilot.enable": {
+    "*": false,
+    "yaml": false,
+    "plaintext": false,
+    "markdown": false
+  },
+
+  "gitlens.codeLens.enabled": false,
+  "gitlens.graph.layout": "editor",
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.remotes": [],
+  "gitlens.statusBar.enabled": false,
+
+  "headwind.runOnSave": false,
+
+  "i18n-ally.displayLanguage": "de",
+
+  "intelephense.environment.phpVersion": "8.4.7",
+  "intelephense.telemetry.enabled": false,
+
+  "javascriptBooster.formattingOptions": {
+    "tabWidth": 4
+  },
+
+  "npm.keybindingsChangedWarningShown": true,
+
+  "php.debug.executablePath": "",
+
+  "phpstan.binCommand": ["valet", "php", "vendor/bin/phpstan"],
+
+  "stylelint.enable": true,
+
+  "redhat.telemetry.enabled": false,
+
+  "svg.preview.mode": "svg",
+
+  "tailwindCSS.experimental.classRegex": [
+    ["const classes = reactive\\({([^+]+)}\\);", "'([^']*)'"],
+    ["const classes = reactive\\({([^+]+)}\\);", "\"([^\"]*)\""],
+    ["const classes = reactive\\({([^+]+)}\\);", "\\`([^\\`]*)\\`"]
+  ],
+
+  "todo-tree.general.tags": [
+    "BUG",
+    "HACK",
+    "FIXME",
+    "TODO",
+    "XXX",
+    "[ ]",
+    "[x]"
+  ],
+  "todo-tree.tree.showScanModeButton": false,
+  "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+
+  "vsicons.dontShowNewVersionMessage": true,
+
+  "xo.enable": true,
+  "xo.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue"
+  ],
+}

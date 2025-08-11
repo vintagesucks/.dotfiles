@@ -1,12 +1,44 @@
 - defaults:
     link:
       relink: true
+    brewfile:
+      stdout: true
+      stderr: false
+      include: ['tap', 'brew', 'cask', 'mas', 'vscode']
 
 - clean: ['~']
 
-- link:
-    ~/.zshrc: zshrc
-
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  - [git config --global init.defaultBranch main]
+  - [git config --global init.defaultBranch main, Setting git default branch]
+
+- brewfile:
+    file: Brewfile
+
+- if:
+    cond: '[ "$(hostname)" = "air" ]'
+    met:
+    - brewfile:
+        file: personal/Brewfile
+    unmet:
+    - shell:
+      -
+        command: echo Skipping personal Brewfile
+        stdout: true
+        quiet: true
+
+- if:
+    cond: '[ "$(hostname)" = "albus" ]'
+    met:
+    - brewfile:
+        file: jungehaie/Brewfile
+    unmet:
+    - shell:
+      -
+        command: echo Skipping jungehaie Brewfile
+        stdout: true
+        quiet: true
+
+- link:
+    ~/.zshrc: zshrc
+    '~/Library/Application Support/Code/User/settings.json': vscode/settings.json
