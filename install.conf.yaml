@@ -51,7 +51,11 @@
           sed -E \"s/^{/{\\n  \\\"editor.fontSize\\\": 14,\\n  \\\"editor.lineHeight\\\": 34,\\n  \\\"terminal.integrated.fontSize\\\": 14,/\"
       fi"'
     description: "Set up smudge filter for machine-specific settings"
-  - command: git checkout HEAD -- vscode/settings.json
+  - command: |
+      cp vscode/settings.json vscode/settings.json.backup
+      rm vscode/settings.json
+      git checkout -- vscode/settings.json || mv vscode/settings.json.backup vscode/settings.json
+      rm -f vscode/settings.json.backup
     description: "Apply smudge filter to VS Code settings"
 
 - link:
