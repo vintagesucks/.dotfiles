@@ -53,10 +53,10 @@
     description: "Set up smudge filter for machine-specific settings"
   - command: |
       cp vscode/settings.json vscode/settings.json.backup
-      rm vscode/settings.json
-      git checkout -- vscode/settings.json || mv vscode/settings.json.backup vscode/settings.json
-      rm -f vscode/settings.json.backup
-    description: "Apply smudge filter to VS Code settings"
+      bash -c "$(git config --get filter.machine-settings.clean)" < vscode/settings.json > vscode/settings.json.tmp
+      bash -c "$(git config --get filter.machine-settings.smudge)" < vscode/settings.json.tmp > vscode/settings.json
+      rm -f vscode/settings.json.tmp vscode/settings.json.backup
+    description: "Apply machine-specific settings to VS Code settings"
 
 - link:
     ~/.zshrc: zshrc
