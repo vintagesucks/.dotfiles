@@ -39,6 +39,21 @@
         stdout: true
         quiet: true
 
+- shell:
+  - command: git config --local filter.machine-settings.clean 'sed -E "/\"editor\.fontSize\"|\"editor\.lineHeight\"|\"terminal\.integrated\.fontSize\"/d"'
+    description: "Set up clean filter for machine-specific settings"
+  - command: |
+      git config --local filter.machine-settings.smudge 'bash -c "
+      HOST=\$(hostname)
+      if [ \"\$HOST\" = \"air\" ]; then
+          cat
+      else
+          sed -E \"s/^{/{\\n  \\\"editor.fontSize\\\": 14,\\n  \\\"editor.lineHeight\\\": 34,\\n  \\\"terminal.integrated.fontSize\\\": 14,/\"
+      fi"'
+    description: "Set up smudge filter for machine-specific settings"
+  - command: git checkout HEAD -- vscode/settings.json
+    description: "Apply smudge filter to VS Code settings"
+
 - link:
     ~/.zshrc: zshrc
     '~/Library/Application Support/Code/User/settings.json': vscode/settings.json
