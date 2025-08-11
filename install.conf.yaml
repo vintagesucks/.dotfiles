@@ -1,5 +1,6 @@
 - defaults:
     link:
+      create: true
       relink: true
     brewfile:
       stdout: true
@@ -61,3 +62,30 @@
 - link:
     ~/.zshrc: zshrc
     '~/Library/Application Support/Code/User/settings.json': vscode/settings.json
+    ~/.config/direnv/direnv.toml: direnv.toml
+
+- if:
+    cond: 'command -v nix'
+    met:
+      - shell:
+        -
+          command: [sudo determinate-nixd upgrade, Upgrading Nix]
+          stdout: true
+    unmet:
+      - shell:
+        -
+          command: [curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install, Installing Nix]
+          stdout: true
+
+- if:
+    cond: 'command -v devenv'
+    met:
+      - shell:
+        -
+          command: [nix-env --upgrade --attr devenv -f https://github.com/NixOS/nixpkgs/tarball/nixpkgs-unstable, Upgrading devenv]
+          stdout: true
+    unmet:
+      - shell:
+        -
+          command: [nix-env --install --attr devenv -f https://github.com/NixOS/nixpkgs/tarball/nixpkgs-unstable, Installing devenv]
+          stdout: true
