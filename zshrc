@@ -13,6 +13,7 @@ autoload -U promptinit; promptinit
 prompt pure
 
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
+zstyle :prompt:pure:environment:nix-shell show no
 autoload -Uz compinit && compinit
 
 export PATH="${HOME}/.composer/vendor/bin:$PATH"
