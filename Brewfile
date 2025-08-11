@@ -17,6 +17,7 @@ brew "gh"
 brew "git"
 brew "htop"
 brew "jq"
+brew "mas"
 brew "mkcert"
 brew "mysql-client"
 brew "nginx", restart_service: :changed
@@ -63,9 +64,9 @@ cask "warp"
 cask "xcodes-app"
 
 mas "Blackmagic Disk Speed Test", id: 425264550
-mas "DevUtils.app", id: 1533756032
+mas "DevUtils", id: 1533756032
 mas "iStat Menus", id: 1319778037
-mas "Ivory for Mastodon by Tapbots", id: 6444602274
+mas "Ivory", id: 6444602274
 mas "Little Snitch Mini", id: 1629008763
 mas "Lungo", id: 1263070803
 mas "Reeder Classic.", id: 1529448980
