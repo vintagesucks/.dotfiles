@@ -5,9 +5,7 @@
 
   "editor.bracketPairColorization.enabled": true,
   "editor.fontFamily": "'Operator Mono', 'SF Mono', Menlo, Monaco, 'Courier New', monospace",
-  "editor.fontSize": 14,
   "editor.inlineSuggest.enabled": true,
-  "editor.lineHeight": 34,
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "none",
   "editor.stickyScroll.enabled": false,
@@ -33,7 +31,6 @@
   "security.promptForLocalFileProtocolHandling": false,
 
   "terminal.integrated.altClickMovesCursor": false,
-  "terminal.integrated.fontSize": 14,
   "terminal.integrated.scrollback": 10000,
   "terminal.integrated.tabs.enabled": true,
 
