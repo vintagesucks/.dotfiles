@@ -19,10 +19,6 @@ export PATH="${HOME}/.composer/vendor/bin:$PATH"
 
 export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
 
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
 export PATH="${HOME}/.local/bin:$PATH"
 
 export DOCKER_HOST=$(docker context inspect | jq -r '.[0].Endpoints.docker.Host')
