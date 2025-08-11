@@ -53,6 +53,8 @@
     "wsl$"
   ],
 
+  "telemetry.feedback.enabled": false,
+
   // @see https://vintagesucks.github.io/wiki/windows/php-laravel-herd.html
   "terminal.integrated.env.windows": {
     "PATH": "${env:PATH};${env:USERPROFILE}\\.config\\herd\\bin"
@@ -97,6 +99,7 @@
     "markdown": false
   },
 
+  "gitlens.ai.enabled": false,
   "gitlens.codeLens.enabled": false,
   "gitlens.graph.layout": "editor",
   "gitlens.hovers.currentLine.over": "line",
