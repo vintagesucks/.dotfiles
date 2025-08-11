@@ -16,6 +16,9 @@
 - brewfile:
     file: Brewfile
 
+- shell:
+  - [sudo-touchid]
+
 - if:
     cond: '[ "$(hostname)" = "air" ]'
     met:
