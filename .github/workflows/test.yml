@@ -16,5 +16,11 @@ jobs:
         submodules: recursive
         token: ${{ secrets.GITHUB_TOKEN }}
 
+    - name: Create mock submodule content
+      run: |
+        mkdir -p personal jungehaie
+        echo "# Personal dotfiles loaded" > personal/zshrc
+        echo "# Jungehaie dotfiles loaded" > jungehaie/zshrc
+
     - name: Install dotfiles
       run: ./install
