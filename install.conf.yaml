@@ -1,13 +1,20 @@
 - defaults:
     link:
       relink: true
+    brewfile:
+      stdout: false
+      stderr: false
+      include: ['tap', 'brew', 'cask', 'mas', 'vscode']
 
 - clean: ['~']
-
-- link:
-    ~/.zshrc: zshrc
-    '~/Library/Application Support/Code/User/settings.json': vscode/settings.json
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   - [git config --global init.defaultBranch main]
+
+- brewfile:
+    file: Brewfile
+
+- link:
+    ~/.zshrc: zshrc
+    '~/Library/Application Support/Code/User/settings.json': vscode/settings.json
