@@ -1,11 +1,11 @@
 # .dotfiles
 
 ```sh
-git clone --recurse-submodules -j8 https://github.com/vintagesucks/.dotfiles.git ~/Documents/GitHub/.dotfiles
+git clone --recurse-submodules -j8 https://github.com/vintagesucks/.dotfiles.git ~/.dotfiles
 ```
 
 ```sh
-cd ~/Documents/GitHub/.dotfiles
+cd ~/.dotfiles
 ```
 
 ```sh
