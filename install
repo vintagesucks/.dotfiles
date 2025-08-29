@@ -2,9 +2,9 @@
 
 set -e
 
-CONFIG="install.conf.yaml"
+DEFAULT_CONFIG_PREFIX="default"
+CONFIG_SUFFIX=".conf.yaml"
 DOTBOT_DIR="dotbot"
-
 DOTBOT_BIN="bin/dotbot"
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
@@ -12,4 +12,11 @@ cd "${BASEDIR}"
 git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
 git submodule update --init --recursive "${DOTBOT_DIR}"
 
-"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -p dotbot-if/if.py --plugin-dir dotbot-brewfile -c "${CONFIG}" "${@}"
+# If no arguments provided, add "mac" automatically
+if [ $# -eq 0 ]; then
+    set -- "mac"
+fi
+
+for conf in ${DEFAULT_CONFIG_PREFIX} ${@}; do
+    "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -p dotbot-if/if.py --plugin-dir dotbot-brewfile -c "${conf}${CONFIG_SUFFIX}"
+done

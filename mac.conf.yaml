@@ -9,10 +9,6 @@
 
 - clean: ['~']
 
-- shell:
-  - [git submodule update --init --recursive, Installing submodules]
-  - [git config --global init.defaultBranch main, Setting git default branch]
-
 - brewfile:
     file: Brewfile
 
