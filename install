@@ -12,9 +12,9 @@ cd "${BASEDIR}"
 git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
 git submodule update --init --recursive "${DOTBOT_DIR}"
 
-# If no arguments provided, add "macos" automatically
+# If no arguments provided, add "mac" automatically
 if [ $# -eq 0 ]; then
-    set -- "macos"
+    set -- "mac"
 fi
 
 for conf in ${DEFAULT_CONFIG_PREFIX} ${@}; do
