@@ -6,3 +6,6 @@ function valet { herd @Args }
 # docker
 function jammy { docker run -it --rm --platform linux/amd64 ubuntu:jammy }
 function noble { docker run -it --rm --platform linux/amd64 ubuntu:noble }
+
+# claude code
+$env:CLAUDE_CODE_GIT_BASH_PATH = "$env:USERPROFILE\scoop\shims\bash.exe"
