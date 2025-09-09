@@ -5,3 +5,6 @@
 
 - link:
     ~/Documents/PowerShell/profile.ps1: profile.ps1
+
+- shell:
+  - [git config --global core.symlinks true, Enabling symbolic links]
