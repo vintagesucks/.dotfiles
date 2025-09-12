@@ -111,6 +111,19 @@
   "i18n-ally.displayLanguage": "de",
 
   "intelephense.environment.phpVersion": "8.4.7",
+  "intelephense.files.exclude": [
+    "**/.devenv/**",
+    "**/.DS_Store/**",
+    "**/.git/**",
+    "**/.hg/**",
+    "**/.history/**",
+    "**/.svn/**",
+    "**/bower_components/**",
+    "**/CVS/**",
+    "**/node_modules/**",
+    "**/vendor/**/{Tests,tests}/**",
+    "**/vendor/**/vendor/**",
+  ],
   "intelephense.telemetry.enabled": false,
 
   "javascriptBooster.formattingOptions": {
